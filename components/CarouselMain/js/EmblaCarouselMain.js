@@ -42,14 +42,14 @@ const EmblaCarouselMain = ({ slides, options = { loop: false } }) => {
   }, [emblaApi, onSelect]);
 
   return (
-    <div className="embla">
-      <div className="embla__viewport" ref={emblaRef}>
-        <div className="embla__container">
+    <div className="embla__main">
+      <div className="embla__viewport__main" ref={emblaRef}>
+        <div className="embla__container__main">
           {slides.map((index) => (
-            <div className="embla__slide" key={index}>
-              <div className="embla__slide__inner">
+            <div className="embla__slide__main" key={index}>
+              <div className="embla__slide__inner__main">
                 <Image
-                  className="embla__slide__img"
+                  className="embla__slide__img__main"
                   src={mediaMainByIndex(index)}
                   alt="A cool cat."
                 />
