@@ -12,8 +12,8 @@ export default function Home() {
   return (
     <>
       <div>
-        <EmblaCarouselMain slides={slides_main} />
-        {/* <EmblaCarouselSub slides={slides_sub} />  */}
+        {/* <EmblaCarouselMain slides={slides_main} /> */}
+        <EmblaCarouselSub slides={slides_sub} /> 
       </div>
     </>
   )

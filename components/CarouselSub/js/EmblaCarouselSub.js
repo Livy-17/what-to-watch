@@ -59,18 +59,18 @@ const EmblaCarouselSub = ({ slides }) => {
   }, [embla, onSelect, onScroll]);
 
   return (
-    <div className="embla">
-      <div className="embla__viewport" ref={viewportRef}>
-        <div className="embla__container">
+    <div className="embla__sub">
+      <div className="embla__viewport__sub" ref={viewportRef}>
+        <div className="embla__container__sub">
           {slides.map((index) => (
-            <div className="embla__slide" key={index}>
-              <div className="embla__slide__inner">
+            <div className="embla__slide__sub" key={index}>
+              <div className="embla__slide__inner__sub">
                 <div
-                  className="embla__slide__parallax"
+                  className="embla__slide__parallax__sub"
                   style={{ transform: `translateX(${parallaxValues[index]}%)` }}
                 >
                   <Image
-                    className="embla__slide__img"
+                    className="embla__slide__img__sub"
                     src={mediaSubByIndex(index)}
                     alt="A cool cat."
                   />
