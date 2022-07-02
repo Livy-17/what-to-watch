@@ -1,12 +1,11 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { PrevButton, NextButton } from "./EmblaCarousleSubButtons.js";
 import useEmblaCarousel from "embla-carousel-react";
-import { mediaSubByIndex } from "../media/index.js";
 import Image from "next/image";
 
 const PARALLAX_FACTOR = 1.2;
 
-const EmblaCarouselSub = ({ slides }) => {
+const EmblaCarouselSub = ({ slides, mediaSubByIndex }) => {
   const [viewportRef, embla] = useEmblaCarousel({
     loop: false,
     dragFree: true
