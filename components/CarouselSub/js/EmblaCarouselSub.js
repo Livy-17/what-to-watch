@@ -72,6 +72,8 @@ const EmblaCarouselSub = ({ slides, mediaSubByIndex }) => {
                     className="embla__slide__img__sub"
                     src={mediaSubByIndex(index)}
                     alt="A cool cat."
+                    height='500px'
+                    width='350px'
                   />
                 </div>
               </div>

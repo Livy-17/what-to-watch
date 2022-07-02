@@ -1,28 +1,27 @@
-.embla__sub {
+.embla {
   position: relative;
   background-color: #f7f7f7;
   padding: 20px;
-  /* max-width: 670px; */
-  max-width: 1900px;
+  max-width: 800px;
   margin-left: auto;
   margin-right: auto;
 }
 
-.embla__viewport__sub {
+.embla__viewport {
   overflow: hidden;
   width: 100%;
 }
 
-.embla__viewport__sub.is-draggable {
+.embla__viewport.is-draggable {
   cursor: move;
   cursor: grab;
 }
 
-.embla__viewport__sub.is-dragging {
+.embla__viewport.is-dragging {
   cursor: grabbing;
 }
 
-.embla__container__sub {
+.embla__container {
   display: flex;
   user-select: none;
   -webkit-touch-callout: none;
@@ -31,31 +30,20 @@
   margin-left: -10px;
 }
 
-.embla__slide__sub {
-  padding-left: 10px;
-  min-width: 80%;
+.embla__slide {
   position: relative;
+  min-width: 50%;
+  padding-left: 10px;
 }
 
-.embla__slide__inner__sub {
+.embla__slide__inner {
   position: relative;
+  overflow: hidden;
   /* height: 190px; */
   height: 510px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
 }
 
-.embla__slide__parallax__sub {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-
-.embla__slide__img__sub {
+.embla__slide__img {
   position: absolute;
   display: block;
   top: 50%;
@@ -67,7 +55,7 @@
   /* transform: translate(-50%, -50%); */
 }
 
-.embla__button__sub {
+.embla__button {
   outline: 0;
   cursor: pointer;
   background-color: transparent;
@@ -85,20 +73,20 @@
   padding: 0;
 }
 
-.embla__button__sub:disabled {
+.embla__button:disabled {
   cursor: default;
   opacity: 0.3;
 }
 
-.embla__button__sub__svg {
+.embla__button__svg {
   width: 100%;
   height: 100%;
 }
 
-.embla__button__sub--prev {
+.embla__button--prev {
   left: 27px;
 }
 
-.embla__button__sub--next {
+.embla__button--next {
   right: 27px;
 }

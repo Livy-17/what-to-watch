@@ -4,5 +4,5 @@ import media3 from "./media-3.jpg";
 import media4 from "./media-4.jpg";
 import media5 from "./media-5.jpg";
 
-export const mediaSub = [media1, media2, media3, media4, media5];
-export const mediaSubByIndex = index => mediaSub[index % mediaSub.length];
+// export const mediaSub = [media1, media2, media3, media4, media5];
+// export const mediaSubByIndex = index => mediaSub[index % mediaSub.length];
