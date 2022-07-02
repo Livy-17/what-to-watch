@@ -13,7 +13,8 @@
     "embla-carousel-react": "^7.0.0-rc01",
     "next": "12.2.0",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-icons": "^4.4.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.7",
