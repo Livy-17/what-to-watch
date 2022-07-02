@@ -8,8 +8,9 @@ const slides_main = Array.from(Array(SLIDE_COUNT_MAIN).keys());
 export default function Home() {
   return (
     <>
-      <div>123</div>
-      <EmblaCarouselMain slides={slides_main} />
+      <div>
+        <EmblaCarouselMain slides={slides_main} />
+      </div>
     </>
   )
 }
