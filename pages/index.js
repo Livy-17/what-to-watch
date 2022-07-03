@@ -2,13 +2,17 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { fetch_by_country_service_page } from '../uilts/fetchAPI';
 import { baseURL } from '../uilts/fetchAPI';
+import CarouselMain from '../components/CarouselMain';
+import CarouselSub from '../components/CarouselSub';
 
 export default function Home({ data_us_netfilx }) {
+
   const images_us_netflix = data_us_netfilx.map(item => item.posterURLs['500']);
-  const index_images_us_netflix = index => images_us_netflix[index % images_us_netflix.length];
+
   return (
     <>
       <div>
+        <CarouselSub images_us_netflix={images_us_netflix} />
       </div>
     </>
   )
