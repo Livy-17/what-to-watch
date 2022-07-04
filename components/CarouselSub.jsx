@@ -8,10 +8,8 @@ export default function CarouselSub({ images_us_netflix }) {
     dots: true,
     infinite: true,
     speed: 1000,
-    slidesToShow: 4,
-    slidesToScroll: 4,
-    // centerMode: true,
-    // centerPadding: '100px'
+    slidesToShow: 6,
+    slidesToScroll: 6,
   };
 
   return (
