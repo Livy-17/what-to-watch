@@ -12,7 +12,8 @@ export const fetch_by_country_service_page = async (url, country, service, page)
       service: service,
       page: page,
       output_language: 'en',
-      language: 'en'
+      language: 'en',
+      order_by: 'original_title'
     },
     headers: {
       'X-RapidAPI-Key': 'ce593eee28mshc95616570c30664p165694jsn509b23999d5a',
