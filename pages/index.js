@@ -39,69 +39,69 @@ export default function Home({ data_us_netfilx }) {
     const runFetch = async () => {
 
       if (serviceByCountry?.netflix?.includes(country)) {
-        const promise1 = await fetch_by_country_service_page(`${baseURL}/search/pro`, country, 'netflix', 1);
-        const promise2 = await fetch_by_country_service_page(`${baseURL}/search/pro`, country, 'netflix', 2);
-        Promise.all([promise1, promise2]).then(v => setDataNetflix(v[0].results.concat(v[1].results)))
+        const array1 = await fetch_by_country_service_page(`${baseURL}/search/pro`, country, 'netflix', 1);
+        const array2 = await fetch_by_country_service_page(`${baseURL}/search/pro`, country, 'netflix', 2);
+        setDataNetflix(array1.concat(array2));
       }
 
       if (serviceByCountry?.prime?.includes(country)) {
-        const promise1 = await fetch_by_country_service_page(`${baseURL}/search/pro`, country, 'prime', 1);
-        const promise2 = await fetch_by_country_service_page(`${baseURL}/search/pro`, country, 'prime', 2);
-        Promise.all([promise1, promise2]).then(v => setDataPrime(v[0].results.concat(v[1].results)))
+        const array1 = await fetch_by_country_service_page(`${baseURL}/search/pro`, country, 'prime', 1);
+        const array2 = await fetch_by_country_service_page(`${baseURL}/search/pro`, country, 'prime', 2);
+        setDataPrime(array1.concat(array2));
       }
 
       if (serviceByCountry?.disney?.includes(country)) {
-        const promise1 = await fetch_by_country_service_page(`${baseURL}/search/pro`, country, 'disney', 1);
-        const promise2 = await fetch_by_country_service_page(`${baseURL}/search/pro`, country, 'disney', 2);
-        Promise.all([promise1, promise2]).then(v => setDataDisney(v[0].results.concat(v[1].results)))
+        const array1 = await fetch_by_country_service_page(`${baseURL}/search/pro`, country, 'disney', 1);
+        const array2 = await fetch_by_country_service_page(`${baseURL}/search/pro`, country, 'disney', 2);
+        setDataDisney(array1.concat(array2));
       }
 
       if (serviceByCountry?.hbo?.includes(country)) {
-        const promise1 = await fetch_by_country_service_page(`${baseURL}/search/pro`, country, 'hbo', 1);
-        const promise2 = await fetch_by_country_service_page(`${baseURL}/search/pro`, country, 'hbo', 2);
-        Promise.all([promise1, promise2]).then(v => setDataHbo(v[0].results.concat(v[1].results)))
+        const array1 = await fetch_by_country_service_page(`${baseURL}/search/pro`, country, 'hbo', 1);
+        const array2 = await fetch_by_country_service_page(`${baseURL}/search/pro`, country, 'hbo', 2);
+        setDataHbo(array1.concat(array2));
       }
 
       if (serviceByCountry?.hulu?.includes(country)) {
-        const promise1 = await fetch_by_country_service_page(`${baseURL}/search/pro`, country, 'hulu', 1);
-        const promise2 = await fetch_by_country_service_page(`${baseURL}/search/pro`, country, 'hulu', 2);
-        Promise.all([promise1, promise2]).then(v => setDataHulu(v[0].results.concat(v[1].results)))
+        const array1 = await fetch_by_country_service_page(`${baseURL}/search/pro`, country, 'hulu', 1);
+        const array2 = await fetch_by_country_service_page(`${baseURL}/search/pro`, country, 'hulu', 2);
+        setDataHulu(array1.concat(array2));
       }
 
       if (serviceByCountry?.peacock?.includes(country)) {
-        const promise1 = await fetch_by_country_service_page(`${baseURL}/search/pro`, country, 'peacock', 1);
-        const promise2 = await fetch_by_country_service_page(`${baseURL}/search/pro`, country, 'peacock', 2);
-        Promise.all([promise1, promise2]).then(v => setDataPeacock(v[0].results.concat(v[1].results)))
+        const array1 = await fetch_by_country_service_page(`${baseURL}/search/pro`, country, 'peacock', 1);
+        const array2 = await fetch_by_country_service_page(`${baseURL}/search/pro`, country, 'peacock', 2);
+        setDataPeacock(array1.concat(array2));
       }
 
       if (serviceByCountry?.paramount?.includes(country)) {
-        const promise1 = await fetch_by_country_service_page(`${baseURL}/search/pro`, country, 'paramount', 1);
-        const promise2 = await fetch_by_country_service_page(`${baseURL}/search/pro`, country, 'paramount', 2);
-        Promise.all([promise1, promise2]).then(v => setDataParamount(v[0].results.concat(v[1].results)))
+        const array1 = await fetch_by_country_service_page(`${baseURL}/search/pro`, country, 'paramount', 1);
+        const array2 = await fetch_by_country_service_page(`${baseURL}/search/pro`, country, 'paramount', 2);
+        setDataParamount(array1.concat(array2));
       }
 
       if (serviceByCountry?.starz?.includes(country)) {
-        const promise1 = await fetch_by_country_service_page(`${baseURL}/search/pro`, country, 'starz', 1);
-        const promise2 = await fetch_by_country_service_page(`${baseURL}/search/pro`, country, 'starz', 2);
-        Promise.all([promise1, promise2]).then(v => setDataStarz(v[0].results.concat(v[1].results)))
+        const array1 = await fetch_by_country_service_page(`${baseURL}/search/pro`, country, 'starz', 1);
+        const array2 = await fetch_by_country_service_page(`${baseURL}/search/pro`, country, 'starz', 2);
+        setDataStarz(array1.concat(array2));
       }
 
       if (serviceByCountry?.showtime?.includes(country)) {
-        const promise1 = await fetch_by_country_service_page(`${baseURL}/search/pro`, country, 'showtime', 1);
-        const promise2 = await fetch_by_country_service_page(`${baseURL}/search/pro`, country, 'showtime', 2);
-        Promise.all([promise1, promise2]).then(v => setDataShowtime(v[0].results.concat(v[1].results)))
+        const array1 = await fetch_by_country_service_page(`${baseURL}/search/pro`, country, 'showtime', 1);
+        const array2 = await fetch_by_country_service_page(`${baseURL}/search/pro`, country, 'showtime', 2);
+        setDataShowtime(array1.concat(array2));
       }
 
       if (serviceByCountry?.apple?.includes(country)) {
-        const promise1 = await fetch_by_country_service_page(`${baseURL}/search/pro`, country, 'apple', 1);
-        const promise2 = await fetch_by_country_service_page(`${baseURL}/search/pro`, country, 'apple', 2);
-        Promise.all([promise1, promise2]).then(v => setDataApple(v[0].results.concat(v[1].results)))
+        const array1 = await fetch_by_country_service_page(`${baseURL}/search/pro`, country, 'apple', 1);
+        const array2 = await fetch_by_country_service_page(`${baseURL}/search/pro`, country, 'apple', 2);
+        setDataApple(array1.concat(array2));
       }
 
       if (serviceByCountry?.mubi?.includes(country)) {
-        const promise1 = await fetch_by_country_service_page(`${baseURL}/search/pro`, country, 'mubi', 1);
-        const promise2 = await fetch_by_country_service_page(`${baseURL}/search/pro`, country, 'mubi', 2);
-        Promise.all([promise1, promise2]).then(v => setDataMubi(v[0].results.concat(v[1].results)))
+        const array1 = await fetch_by_country_service_page(`${baseURL}/search/pro`, country, 'mubi', 1);
+        const array2 = await fetch_by_country_service_page(`${baseURL}/search/pro`, country, 'mubi', 2);
+        setDataMubi(array1.concat(array2));
       }
 
     }

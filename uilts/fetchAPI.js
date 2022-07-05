@@ -20,9 +20,9 @@ export const fetch_by_country_service_page = async (url, country, service, page)
       'X-RapidAPI-Host': 'streaming-availability.p.rapidapi.com'
     }
   };
-  const { data } = await axios.get(url, options);
+  const { data: { results } } = await axios.get(url, options);
 
-  return data;
+  return results;
 }
 
 export const fetch_service_by_country = async () => {
