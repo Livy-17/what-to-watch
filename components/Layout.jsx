@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Header from './Header';
 import Footer from './Footer';
 
-const Layout = ({ children }) => {
+const Layout = ({ children, showNavbar }) => {
   return ( 
     <>
       <div className='bg-black'>
@@ -11,7 +11,7 @@ const Layout = ({ children }) => {
           <title>WhatToWatch</title>
         </Head>
         <header>
-          <Header />
+          { showNavbar && <Header /> }
         </header>
         <main>
           { children }
