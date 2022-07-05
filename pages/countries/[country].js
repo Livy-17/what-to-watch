@@ -65,7 +65,7 @@ export async function getStaticPaths() {
       {params: { country: 'co' }},
       {params: { country: 'mx' }}
     ],
-    fallback: true
+    fallback: false
   };
 }
 
