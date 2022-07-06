@@ -6,7 +6,7 @@ async function avoidRateLimit() {
   }
 }
 
-function sleep(ms = 500) {
+function sleep(ms = 2000) {
   return new Promise((res) => setTimeout(res, ms))
 }
 
