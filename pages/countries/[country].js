@@ -76,9 +76,9 @@ export async function getStaticProps({ params: { country }}) {
   if (serviceByCountry?.netflix?.includes(country)) {
     const array1 = await fetch_by_country_service_page(`${baseURL}/search/pro`, country, 'netflix', 1);
     const array2 = await fetch_by_country_service_page(`${baseURL}/search/pro`, country, 'netflix', 2);
-    var DataNetflix = array1.concat(array2);
+    var DataNetflix = await array1.concat(array2);
   } else {
-    var DataNetflix = null;
+    var DataNetflix = await null;
   }
 
   // if (serviceByCountry?.prime?.includes(country)) {
@@ -164,7 +164,7 @@ export async function getStaticProps({ params: { country }}) {
   return {
     props: {
       DataNetflix: DataNetflix,
-      DataPrime: DataPrime,
+      // DataPrime: DataPrime,
       // DataDisney: DataDisney,
       // DataHbo: DataHbo,
       // DataHulu: DataHulu,
