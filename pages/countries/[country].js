@@ -19,6 +19,7 @@ export default function Home({ DataNetflix, DataPrime, DataDisney, DataHbo, Data
   if (DataApple) {var imagesApple = DataApple.map(item => item.posterURLs['500']);}
   if (DataMubi) {var imagesMubi = DataMubi.map(item => item.posterURLs['500']);}
 
+  
   return (
     <>
       <div>
