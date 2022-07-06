@@ -7,37 +7,23 @@ import CarouselSub from '../../components/CarouselSub';
 
 export default function Home({ DataMain, DataNetflix, DataPrime, DataDisney, DataHbo, DataHulu, DataPeacock, DataParamount, DataStarz, DataShowtime, DataApple, DataMubi }) {
 
-  if (DataMain) {var imagesMain = DataMain.map(item => item.posterURLs['original']);}
-
-  if (DataNetflix) {var imagesNetflix = DataNetflix.map(item => item.posterURLs['500']);}
-  if (DataPrime) {var imagesPrime = DataPrime.map(item => item.posterURLs['500']);}
-  if (DataDisney) {var imagesDisney = DataDisney.map(item => item.posterURLs['500']);}
-  if (DataHbo) {var imagesHbo = DataHbo.map(item => item.posterURLs['500']);}
-  if (DataHulu) {var imagesHulu = DataHulu.map(item => item.posterURLs['500']);}
-  if (DataPeacock) {var imagesPeacock = DataPeacock.map(item => item.posterURLs['500']);}
-  if (DataParamount) {var imagesParamount = DataParamount.map(item => item.posterURLs['500']);}
-  if (DataStarz) {var imagesStarz = DataStarz.map(item => item.posterURLs['500']);}
-  if (DataShowtime) {var imagesShowtime = DataShowtime.map(item => item.posterURLs['500']);}
-  if (DataApple) {var imagesApple = DataApple.map(item => item.posterURLs['500']);}
-  if (DataMubi) {var imagesMubi = DataMubi.map(item => item.posterURLs['500']);}
-
   return (
     <>
       <div>
-        { imagesMain && <CarouselMain images={imagesMain} serviceName="Today's Top Picks" /> }
+        { DataMain && <CarouselMain data={DataMain} serviceName="Today's Top Picks" /> }
       </div>
       <div>
-        { imagesNetflix && <CarouselSub images={imagesNetflix} serviceName='Netflix' /> }
-        { imagesPrime && <CarouselSub images={imagesPrime} serviceName='Prime' /> }
-        { imagesDisney && <CarouselSub images={imagesDisney} serviceName='Disney' /> }
-        { imagesHbo && <CarouselSub images={imagesHbo} serviceName='HBO' /> }
-        { imagesHulu && <CarouselSub images={imagesHulu} serviceName='Hulu' /> }
-        { imagesPeacock && <CarouselSub images={imagesPeacock} serviceName='Peacock' /> }
-        { imagesParamount && <CarouselSub images={imagesParamount} serviceName='Paramount' /> }
-        { imagesStarz && <CarouselSub images={imagesStarz} serviceName='Starz' /> }
-        { imagesShowtime && <CarouselSub images={imagesShowtime} serviceName='Showtime' /> }
-        { imagesApple && <CarouselSub images={imagesApple} serviceName='Apple' /> }
-        { imagesMubi && <CarouselSub images={imagesMubi} serviceName='Mubi' /> }
+        { DataNetflix && <CarouselSub data={DataNetflix} serviceName='Netflix' /> }
+        { DataPrime && <CarouselSub data={DataPrime} serviceName='Prime' /> }
+        { DataDisney && <CarouselSub data={DataDisney} serviceName='Disney' /> }
+        { DataHbo && <CarouselSub data={DataHbo} serviceName='HBO' /> }
+        { DataHulu && <CarouselSub data={DataHulu} serviceName='Hulu' /> }
+        { DataPeacock && <CarouselSub data={DataPeacock} serviceName='Peacock' /> }
+        { DataParamount && <CarouselSub data={DataParamount} serviceName='Paramount' /> }
+        { DataStarz && <CarouselSub data={DataStarz} serviceName='Starz' /> }
+        { DataShowtime && <CarouselSub data={DataShowtime} serviceName='Showtime' /> }
+        { DataApple && <CarouselSub data={DataApple} serviceName='Apple' /> }
+        { DataMubi && <CarouselSub data={DataMubi} serviceName='Mubi' /> }
       </div>
     </>
   )

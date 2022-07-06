@@ -16,10 +16,6 @@ const handleChange = (event) => {
     <div className='fixed top-0 w-full flex h-[60px] bg-red-100 items-center justify-between pl-10 pr-10 z-50'>
       <p>WhatToWatch</p>
       <div className='flex flex-row items-center justify-center gap-5'>
-        <div className='flex flex-row items-center justify-center'>
-          <input />
-          <HiOutlineSearch className='ml-1 mr-1'/>
-        </div>
         <div>
           <FormControl fullWidth >
             <InputLabel id="demo-simple-select-label">
