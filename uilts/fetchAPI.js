@@ -1,8 +1,20 @@
 import axios from "axios";
 
+async function avoidRateLimit() {
+  if (process.env.NODE_ENV === 'production') {
+    await sleep()
+  }
+}
+
+function sleep(ms = 500) {
+  return new Promise((res) => setTimeout(res, ms))
+}
+
 export const baseURL = 'https://streaming-availability.p.rapidapi.com';
 
 export const fetch_by_country_service_page = async (url, country, service, page) => {
+
+  await avoidRateLimit();
 
   const options = {
     params: {
@@ -26,6 +38,8 @@ export const fetch_by_country_service_page = async (url, country, service, page)
 }
 
 export const fetch_service_by_country = async () => {
+
+  await avoidRateLimit();
 
   const options = {
     headers: {
