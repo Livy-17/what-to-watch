@@ -42,28 +42,28 @@ export async function getStaticPaths() {
   return {
     paths: [
       {params: { country: 'ca' }},
-      {params: { country: 'gb' }},
-      {params: { country: 'us' }},
-      {params: { country: 'nl' }},
-      {params: { country: 'au' }},
-      {params: { country: 'nz' }},
-      {params: { country: 'at' }},
-      {params: { country: 'de' }},
-      {params: { country: 'it' }},
-      {params: { country: 'es' }},
-      {params: { country: 'ch' }},
-      {params: { country: 'fr' }},
-      {params: { country: 'be' }},
-      {params: { country: 'dk' }},
-      {params: { country: 'fi' }},
-      {params: { country: 'no' }},
-      {params: { country: 'pt' }},
-      {params: { country: 'se' }},
-      {params: { country: 'ar' }},
-      {params: { country: 'br' }},
-      {params: { country: 'cl' }},
-      {params: { country: 'co' }},
-      {params: { country: 'mx' }}
+      // {params: { country: 'gb' }},
+      // {params: { country: 'us' }},
+      // {params: { country: 'nl' }},
+      // {params: { country: 'au' }},
+      // {params: { country: 'nz' }},
+      // {params: { country: 'at' }},
+      // {params: { country: 'de' }},
+      // {params: { country: 'it' }},
+      // {params: { country: 'es' }},
+      // {params: { country: 'ch' }},
+      // {params: { country: 'fr' }},
+      // {params: { country: 'be' }},
+      // {params: { country: 'dk' }},
+      // {params: { country: 'fi' }},
+      // {params: { country: 'no' }},
+      // {params: { country: 'pt' }},
+      // {params: { country: 'se' }},
+      // {params: { country: 'ar' }},
+      // {params: { country: 'br' }},
+      // {params: { country: 'cl' }},
+      // {params: { country: 'co' }},
+      // {params: { country: 'mx' }}
     ],
     fallback: false
   };
@@ -71,19 +71,15 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params: { country }}) {
 
-  // const serviceByCountry = await fetch_service_by_country();
+  const serviceByCountry = await fetch_service_by_country();
 
-  // if (serviceByCountry?.netflix?.includes(country)) {
-  //   const array1 = await fetch_by_country_service_page(`${baseURL}/search/pro`, country, 'netflix', 1);
-  //   const array2 = await fetch_by_country_service_page(`${baseURL}/search/pro`, country, 'netflix', 2);
-  //   var DataNetflix = array1.concat(array2);
-  // } else {
-  //   var DataNetflix = null;
-  // }
-
-  const array1 = await fetch_by_country_service_page(`${baseURL}/search/pro`, country, 'netflix', 1);
-  const array2 = await fetch_by_country_service_page(`${baseURL}/search/pro`, country, 'netflix', 2);
-  var DataNetflix = array1.concat(array2);
+  if (serviceByCountry?.netflix?.includes(country)) {
+    const array1 = await fetch_by_country_service_page(`${baseURL}/search/pro`, country, 'netflix', 1);
+    const array2 = await fetch_by_country_service_page(`${baseURL}/search/pro`, country, 'netflix', 2);
+    var DataNetflix = array1.concat(array2);
+  } else {
+    var DataNetflix = null;
+  }
 
   // if (serviceByCountry?.prime?.includes(country)) {
   //   const array1 = await fetch_by_country_service_page(`${baseURL}/search/pro`, country, 'prime', 1);
