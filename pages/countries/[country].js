@@ -8,7 +8,7 @@ import CarouselSub from '../../components/CarouselSub';
 export default function Home({ DataNetflix, DataPrime, DataDisney, DataHbo, DataHulu, DataPeacock, DataParamount, DataStarz, DataShowtime, DataApple, DataMubi }) {
 
   if (DataNetflix) {var imagesNetflix = DataNetflix.map(item => item.posterURLs['500']);}
-  if (DataPrime) {var imagesPrime = DataPrime.map(item => item.posterURLs['500']);}
+  // if (DataPrime) {var imagesPrime = DataPrime.map(item => item.posterURLs['500']);}
   // if (DataDisney) {var imagesDisney = DataDisney.map(item => item.posterURLs['500']);}
   // if (DataHbo) {var imagesHbo = DataHbo.map(item => item.posterURLs['500']);}
   // if (DataHulu) {var imagesHulu = DataHulu.map(item => item.posterURLs['500']);}
@@ -23,7 +23,7 @@ export default function Home({ DataNetflix, DataPrime, DataDisney, DataHbo, Data
     <>
       <div>
         { imagesNetflix && <CarouselSub images={imagesNetflix} serviceName='Netflix' /> }
-        { imagesPrime && <CarouselSub images={imagesPrime} serviceName='Prime' /> }
+        {/* { imagesPrime && <CarouselSub images={imagesPrime} serviceName='Prime' /> } */}
         {/* { imagesDisney && <CarouselSub images={imagesDisney} serviceName='Disney' /> }
         { imagesHbo && <CarouselSub images={imagesHbo} serviceName='HBO' /> }
         { imagesHulu && <CarouselSub images={imagesHulu} serviceName='Hulu' /> }
@@ -81,13 +81,13 @@ export async function getStaticProps({ params: { country }}) {
     var DataNetflix = null;
   }
 
-  if (serviceByCountry?.prime?.includes(country)) {
-    const array1 = await fetch_by_country_service_page(`${baseURL}/search/pro`, country, 'prime', 1);
-    const array2 = await fetch_by_country_service_page(`${baseURL}/search/pro`, country, 'prime', 2);
-    var DataPrime = array1.concat(array2);
-  } else {
-    var DataPrime = null;
-  }
+  // if (serviceByCountry?.prime?.includes(country)) {
+  //   const array1 = await fetch_by_country_service_page(`${baseURL}/search/pro`, country, 'prime', 1);
+  //   const array2 = await fetch_by_country_service_page(`${baseURL}/search/pro`, country, 'prime', 2);
+  //   var DataPrime = array1.concat(array2);
+  // } else {
+  //   var DataPrime = null;
+  // }
 
   // if (serviceByCountry?.disney?.includes(country)) {
   //   const array1 = await fetch_by_country_service_page(`${baseURL}/search/pro`, country, 'disney', 1);
