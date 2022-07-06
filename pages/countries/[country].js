@@ -5,7 +5,9 @@ import { baseURL, fetch_by_country_service_page, fetch_service_by_country } from
 import CarouselMain from '../../components/CarouselMain';
 import CarouselSub from '../../components/CarouselSub';
 
-export default function Home({ DataNetflix, DataPrime, DataDisney, DataHbo, DataHulu, DataPeacock, DataParamount, DataStarz, DataShowtime, DataApple, DataMubi }) {
+export default function Home({ DataMain, DataNetflix, DataPrime, DataDisney, DataHbo, DataHulu, DataPeacock, DataParamount, DataStarz, DataShowtime, DataApple, DataMubi }) {
+
+  if (DataMain) {var imagesMain = DataMain.map(item => item.posterURLs['original']);}
 
   if (DataNetflix) {var imagesNetflix = DataNetflix.map(item => item.posterURLs['500']);}
   if (DataPrime) {var imagesPrime = DataPrime.map(item => item.posterURLs['500']);}
@@ -21,6 +23,9 @@ export default function Home({ DataNetflix, DataPrime, DataDisney, DataHbo, Data
 
   return (
     <>
+      <div>
+        { imagesMain && <CarouselMain images={imagesMain} serviceName="Today's Top Picks" /> }
+      </div>
       <div>
         { imagesNetflix && <CarouselSub images={imagesNetflix} serviceName='Netflix' /> }
         { imagesPrime && <CarouselSub images={imagesPrime} serviceName='Prime' /> }
@@ -72,6 +77,13 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params: { country }}) {
 
   const serviceByCountry = await fetch_service_by_country();
+
+  if (serviceByCountry?.netflix?.includes(country)) {
+    const array = await fetch_by_country_service_page(`${baseURL}/search/pro`, country, 'netflix', 3);
+    var DataMain = array.slice(0,5);
+  } else {
+    var DataMain = null;
+  }
 
   if (serviceByCountry?.netflix?.includes(country)) {
     const array1 = await fetch_by_country_service_page(`${baseURL}/search/pro`, country, 'netflix', 1);
@@ -163,6 +175,7 @@ export async function getStaticProps({ params: { country }}) {
 
   return {
     props: {
+      DataMain: DataMain,
       DataNetflix: DataNetflix,
       DataPrime: DataPrime,
       DataDisney: DataDisney,

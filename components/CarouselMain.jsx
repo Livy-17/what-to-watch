@@ -1,7 +1,7 @@
-import React, { Component } from "react";
 import Slider from "react-slick";
+import Image from "next/image";
 
-export default function CarouselMain() {
+export default function AutoPlay({ images, serviceName }) {
 
   const settings = {
     dots: true,
@@ -9,34 +9,23 @@ export default function CarouselMain() {
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
-    speed: 2000,
-    autoplaySpeed: 2000,
-    cssEase: "linear"
-  };
+    speed: 1000,
+    autoplaySpeed: 5000,
+    cssEase: "linear",
+  }
 
   return (
-    <div>
-      <h2>Auto Play</h2>
+    <div className="px-20 my-20">
+      <h2 className="text-white text-6xl mb-10 mt-10 ml-5">{serviceName}</h2>
       <Slider {...settings}>
-        <div>
-          <h3>1</h3>
-        </div>
-        <div>
-          <h3>2</h3>
-        </div>
-        <div>
-          <h3>3</h3>
-        </div>
-        <div>
-          <h3>4</h3>
-        </div>
-        <div>
-          <h3>5</h3>
-        </div>
-        <div>
-          <h3>6</h3>
-        </div>
+        {images.map((item, i) => {
+          if (item) return (
+            <div key={i} className='ml-[20px]'>
+              <Image src={item} alt='' height='700px' width='500px' />
+            </div>
+        )})}
       </Slider>
     </div>
   );
+
 }
