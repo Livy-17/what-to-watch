@@ -7,7 +7,7 @@ import CarouselSub from '../../components/CarouselSub';
 
 export default function Home({ DataNetflix, DataPrime, DataDisney, DataHbo, DataHulu, DataPeacock, DataParamount, DataStarz, DataShowtime, DataApple, DataMubi }) {
 
-  // if (DataNetflix) {var imagesNetflix = DataNetflix.map(item => item.posterURLs['500']);}
+  if (DataNetflix) {var imagesNetflix = DataNetflix.map(item => item.posterURLs['500']);}
   // if (DataPrime) {var imagesPrime = DataPrime.map(item => item.posterURLs['500']);}
   // if (DataDisney) {var imagesDisney = DataDisney.map(item => item.posterURLs['500']);}
   // if (DataHbo) {var imagesHbo = DataHbo.map(item => item.posterURLs['500']);}
@@ -21,8 +21,8 @@ export default function Home({ DataNetflix, DataPrime, DataDisney, DataHbo, Data
 
   return (
     <>
-      <div>123
-        {/* { imagesNetflix && <CarouselSub images={imagesNetflix} serviceName='Netflix' /> } */}
+      <div>
+        { imagesNetflix && <CarouselSub images={imagesNetflix} serviceName='Netflix' /> }
         {/* { imagesPrime && <CarouselSub images={imagesPrime} serviceName='Prime' /> } */}
         {/* { imagesDisney && <CarouselSub images={imagesDisney} serviceName='Disney' /> }
         { imagesHbo && <CarouselSub images={imagesHbo} serviceName='HBO' /> }
@@ -71,7 +71,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params: { country }}) {
 
-  const serviceByCountry = await fetch_service_by_country();
+  // const serviceByCountry = await fetch_service_by_country();
 
   // if (serviceByCountry?.netflix?.includes(country)) {
   //   const array1 = await fetch_by_country_service_page(`${baseURL}/search/pro`, country, 'netflix', 1);
@@ -80,6 +80,10 @@ export async function getStaticProps({ params: { country }}) {
   // } else {
   //   var DataNetflix = null;
   // }
+
+  const array1 = await fetch_by_country_service_page(`${baseURL}/search/pro`, country, 'netflix', 1);
+  const array2 = await fetch_by_country_service_page(`${baseURL}/search/pro`, country, 'netflix', 2);
+  var DataNetflix = array1.concat(array2);
 
   // if (serviceByCountry?.prime?.includes(country)) {
   //   const array1 = await fetch_by_country_service_page(`${baseURL}/search/pro`, country, 'prime', 1);
@@ -163,7 +167,7 @@ export async function getStaticProps({ params: { country }}) {
 
   return {
     props: {
-      // DataNetflix: DataNetflix,
+      DataNetflix: DataNetflix,
       // DataPrime: DataPrime,
       // DataDisney: DataDisney,
       // DataHbo: DataHbo,
