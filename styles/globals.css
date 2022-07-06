@@ -13,3 +13,11 @@
 .slick-dots li.slick-active button:before {
   color: white !important;
 }
+
+#sub--container:hover > #sub--button {
+  display: inherit;
+}
+
+#sub--button:hover + #sub--pic {
+  filter:brightness(50%);
+}

@@ -20,7 +20,7 @@ export default function AutoPlay({ images, serviceName }) {
       <Slider {...settings}>
         {images.map((item, i) => {
           if (item) return (
-            <div key={i} className='ml-[20px]'>
+            <div key={i} className='ml-[20px] hover:cursor-pointer'>
               <Image src={item} alt='' height='700px' width='500px' />
             </div>
         )})}
