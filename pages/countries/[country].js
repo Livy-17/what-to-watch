@@ -5,7 +5,7 @@
 // import CarouselMain from '../../components/CarouselMain';
 // import CarouselSub from '../../components/CarouselSub';
 
-// export default function Home({ DataNetflix, DataPrime, DataDisney, DataHbo, DataHulu, DataPeacock, DataParamount, DataStarz, DataShowtime, DataApple, DataMubi }) {
+export default function Home({ DataNetflix, DataPrime, DataDisney, DataHbo, DataHulu, DataPeacock, DataParamount, DataStarz, DataShowtime, DataApple, DataMubi }) {
 
 //   if (DataNetflix) {var imagesNetflix = DataNetflix.map(item => item.posterURLs['500']);}
 //   if (DataPrime) {var imagesPrime = DataPrime.map(item => item.posterURLs['500']);}
@@ -19,7 +19,8 @@
 //   if (DataApple) {var imagesApple = DataApple.map(item => item.posterURLs['500']);}
 //   if (DataMubi) {var imagesMubi = DataMubi.map(item => item.posterURLs['500']);}
 
-//   return (
+  return (
+    <div>123</div>
 //     <>
 //       <div>
 //         { imagesNetflix && <CarouselSub images={imagesNetflix} serviceName='Netflix' /> }
@@ -35,8 +36,8 @@
 //         { imagesMubi && <CarouselSub images={imagesMubi} serviceName='Mubi' /> }
 //       </div>
 //     </>
-//   )
-// }
+  )
+}
 
 // export async function getStaticPaths() {
 //   return {
