@@ -42,9 +42,9 @@ export async function getStaticPaths() {
   return {
     paths: [
       {params: { country: 'ca' }},
-      // {params: { country: 'gb' }},
-      // {params: { country: 'us' }},
-      // {params: { country: 'nl' }},
+      {params: { country: 'gb' }},
+      {params: { country: 'us' }},
+      {params: { country: 'nl' }},
       // {params: { country: 'au' }},
       // {params: { country: 'nz' }},
       // {params: { country: 'at' }},
