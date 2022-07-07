@@ -22,7 +22,7 @@ export default function CarouselSub({ data, serviceName }) {
   const handleModalClose = () => setModalOpen(false);
 
   return (
-    <div className="px-20 my-20">
+    <div className="px-20 my-20" id='CarouselSub'>
       <div>
         <h2 className="text-white text-5xl mb-10 ml-5">{serviceName}</h2>
         <Slider {...settings}>
@@ -37,13 +37,13 @@ export default function CarouselSub({ data, serviceName }) {
                   </div>
                 </div>
                 <div className="z-10 hover:brightness-50" id='sub--pic'>
-                  <Image src={item.posterURLs['500']} alt='' height='500px' width='350px' />
+                  <Image src={item.posterURLs['500']} alt='' height='500px' width='350px' style={{ borderRadius: '5px' }} />
                 </div>
               </div>
           )})}
         </Slider>
       </div>
-      <ModalComp handleModalClose={handleModalClose} modalOpen={modalOpen} dataFiltered={dataFiltered} theKey={theKey} />
+      <ModalComp handleModalClose={handleModalClose} modalOpen={modalOpen} dataFiltered={dataFiltered} theKey={theKey} serviceName={serviceName} />
     </div>
   );
 };

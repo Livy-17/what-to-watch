@@ -6,7 +6,7 @@ import Footer from './Footer';
 const Layout = ({ children, showNavbar }) => {
   return ( 
     <>
-      <div className='bg-black'>
+      <div style={{backgroundColor: 'rgba(24, 24, 24, 1)'}}>
         <Head>
           <title>WhatToWatch</title>
         </Head>

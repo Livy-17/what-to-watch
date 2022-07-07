@@ -9,9 +9,10 @@ export default function Home({ DataMain, DataNetflix, DataPrime, DataDisney, Dat
 
   return (
     <>
-      <div>
+      {/* <div>
         { DataMain && <CarouselMain data={DataMain} serviceName="Today's Top Picks" /> }
-      </div>
+      </div> */}
+      <div className='pt-[60px]'></div>
       <div>
         { DataNetflix && <CarouselSub data={DataNetflix} serviceName='Netflix' /> }
         { DataPrime && <CarouselSub data={DataPrime} serviceName='Prime' /> }
