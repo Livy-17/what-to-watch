@@ -15,12 +15,13 @@ export default function CarouselSub({ data, serviceName }) {
   const handleModalOpen = (i) => {setTheKey(i); setModalOpen(true)};
   const handleModalClose = () => setModalOpen(false);
 
-  const isMobile = useMediaQuery('(max-width:1400px)');
+  const isMobile = useMediaQuery('(max-width:1536px)');
+  const isPhone = useMediaQuery('(max-width:640px');
 
   return (
     <div className="px-20 my-20" id='CarouselSub'>
       <div>
-        <h2 className="text-white text-5xl mb-10 ml-5">{serviceName}</h2>
+        <h2 className="text-white text-3xl sm:text-5xl mb-10 ml-5">{serviceName}</h2>
         <div>
           <Swiper
             className="mySwiper"
@@ -35,7 +36,7 @@ export default function CarouselSub({ data, serviceName }) {
                 slidesPerView: 2,
                 spaceBetween: 0,
               },
-              830: {
+              850: {
                 slidesPerView: 3,
                 spaceBetween: 0,
               },
@@ -65,12 +66,14 @@ export default function CarouselSub({ data, serviceName }) {
                 return (
                   <SwiperSlide key={i}>
                     <div id='sub--container' className="relative">
-                      <div className="z-20 absolute top-[44%] right-[26%] hidden" id='sub--button'>
-                        <div className="w-[120px] h-[40px] text-[20px] text-white text-center border-solid border-[2px] border-white hover:border-red-500 hover:text-red-500 transition duration-300">
-                          Details
+                      {!isMobile && 
+                        <div className="z-20 absolute top-[44%] right-[26%] hidden" id='sub--button' onClick={() => handleModalOpen(i)}>
+                          <div className="w-[120px] h-[40px] text-[20px] text-white text-center border-solid border-[2px] border-white hover:border-red-500 hover:text-red-500 transition duration-300">
+                            Details
+                          </div>
                         </div>
-                      </div>
-                      <div className="z-10 hover:brightness-50 id='sub--pic h-[350px] w-[250px]" id='sub--pic'>
+                      }
+                      <div className="z-10 2xl:hover:brightness-50 id='sub--pic h-[350px] w-[250px]" id='sub--pic' onClick={ isMobile ? () => handleModalOpen(i) : undefined } >
                         <Image src={item.posterURLs['500']} alt='' height='350px' width='250px' style={{ borderRadius: '5px' }} />
                       </div>
                     </div>

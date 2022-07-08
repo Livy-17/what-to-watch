@@ -68,3 +68,23 @@
   border-radius: 5px;
   backdrop-filter:brightness(50%);
 }
+
+#modalContainer {
+  position: fixed;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  color: white;
+  background-color: rgba(24, 24, 24, 1);
+  box-shadow: 0 0 5px 5px black;
+  padding: 50px 50px 50px 50px;
+  border-radius: 20px;
+  width: 300px;
+  overflow: scroll;
+}
+
+@media (min-width: 500px) {
+  #modalContainer {
+    width: 500px;
+  }
+}

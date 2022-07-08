@@ -15,7 +15,7 @@ export default function Home({ DataMain, DataNetflix, DataPrime, DataDisney, Dat
       <div className='pt-[60px]'></div>
       <div>
         { DataNetflix && <CarouselSub data={DataNetflix} serviceName='Netflix' /> }
-        {/* { DataPrime && <CarouselSub data={DataPrime} serviceName='Prime' /> }
+        { DataPrime && <CarouselSub data={DataPrime} serviceName='Prime' /> }
         { DataDisney && <CarouselSub data={DataDisney} serviceName='Disney' /> }
         { DataHbo && <CarouselSub data={DataHbo} serviceName='HBO' /> }
         { DataHulu && <CarouselSub data={DataHulu} serviceName='Hulu' /> }
@@ -24,7 +24,7 @@ export default function Home({ DataMain, DataNetflix, DataPrime, DataDisney, Dat
         { DataStarz && <CarouselSub data={DataStarz} serviceName='Starz' /> }
         { DataShowtime && <CarouselSub data={DataShowtime} serviceName='Showtime' /> }
         { DataApple && <CarouselSub data={DataApple} serviceName='Apple' /> }
-        { DataMubi && <CarouselSub data={DataMubi} serviceName='Mubi' /> } */}
+        { DataMubi && <CarouselSub data={DataMubi} serviceName='Mubi' /> }
       </div>
     </>
   )
