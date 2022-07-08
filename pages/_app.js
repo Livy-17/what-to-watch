@@ -3,6 +3,10 @@ import Layout from '../components/Layout';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import { useState } from 'react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
 
 function MyApp({ Component, pageProps }) {
 
@@ -10,7 +14,7 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
-      <Layout showNavbar={showNavbar} >
+      <Layout showNavbar={showNavbar}>
         <Component {...pageProps} setShowNavbar={setShowNavbar} />
       </Layout>
     </>

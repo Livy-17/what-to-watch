@@ -4,12 +4,13 @@ import Header from './Header';
 import Footer from './Footer';
 
 const Layout = ({ children, showNavbar }) => {
+
   return ( 
     <>
-      <div style={{backgroundColor: 'rgba(24, 24, 24, 1)'}}>
-        <Head>
-          <title>WhatToWatch</title>
-        </Head>
+      <Head>
+        <title>WhatToWatch</title>
+      </Head>
+      <div style={{ backgroundColor: 'rgba(24, 24, 24, 1)' }} >
         <header>
           { showNavbar && <Header /> }
         </header>

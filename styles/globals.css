@@ -21,3 +21,50 @@
 #sub--button:hover + #sub--pic {
   filter:brightness(50%);
 }
+
+#nav--title {
+  font-family: 'The Nautigal', cursive;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide Image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-button-next::after {
+  padding: 5px;
+  border-radius: 5px;
+  backdrop-filter:brightness(50%);
+}
+
+.swiper-button-prev::after {
+  padding: 5px;
+  border-radius: 5px;
+  backdrop-filter:brightness(50%);
+}
