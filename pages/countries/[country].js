@@ -1,17 +1,10 @@
-import { useState, useEffect } from 'react';
-import Head from 'next/head'
-import Image from 'next/image'
 import { baseURL, fetch_by_country_service_page, fetch_service_by_country } from '../../uilts/fetchAPI';
-import CarouselMain from '../../components/CarouselMain';
 import CarouselSub from '../../components/CarouselSub';
 
-export default function Home({ DataMain, DataNetflix, DataPrime, DataDisney, DataHbo, DataHulu, DataPeacock, DataParamount, DataStarz, DataShowtime, DataApple, DataMubi }) {
+export default function Home({ DataNetflix, DataPrime, DataDisney, DataHbo, DataHulu, DataPeacock, DataParamount, DataStarz, DataShowtime, DataApple, DataMubi }) {
 
   return (
     <>
-      {/* <div>
-        { DataMain && <CarouselMain data={DataMain} serviceName="Today's Top Picks" /> }
-      </div> */}
       <div className='pt-[60px]'></div>
       <div>
         { DataNetflix && <CarouselSub data={DataNetflix} serviceName='Netflix' /> }

@@ -9,6 +9,7 @@ const Layout = ({ children, showNavbar }) => {
     <>
       <Head>
         <title>WhatToWatch</title>
+        <meta name='description' content='What to Watch' />
       </Head>
       <div style={{ backgroundColor: 'rgba(24, 24, 24, 1)' }} >
         <header>

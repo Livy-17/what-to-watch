@@ -1,4 +1,4 @@
-import React, { Component, useState, useRef } from "react";
+import React, { useState } from "react";
 import Slider from "react-slick";
 import Image from "next/image";
 import ModalComp from "./ModalComp";

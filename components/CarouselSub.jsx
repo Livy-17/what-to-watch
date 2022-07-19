@@ -1,7 +1,7 @@
-import React, { Component, useState, useRef } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import ModalComp from "./ModalComp";
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import { Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { useMediaQuery } from "@mui/material";
 
@@ -16,7 +16,6 @@ export default function CarouselSub({ data, serviceName }) {
   const handleModalClose = () => setModalOpen(false);
 
   const isMobile = useMediaQuery('(max-width:1536px)');
-  const isPhone = useMediaQuery('(max-width:640px');
 
   return (
     <div className="px-20 my-20" id='CarouselSub'>

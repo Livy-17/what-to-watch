@@ -1,5 +1,4 @@
 import React from 'react';
-import { HiOutlineSearch } from 'react-icons/hi';
 import Link from 'next/link';
 import { FormControl, InputLabel, Select, MenuItem, Box } from '@mui/material';
 import PublicIcon from '@mui/icons-material/Public';

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Typography, Modal, Divider, withTheme } from '@mui/material';
+import { Box, Typography, Modal, Divider } from '@mui/material';
 import { useMediaQuery } from '@mui/material';
 
 function ModalComp({ modalOpen, handleModalClose, dataFiltered, theKey, serviceName }) {
