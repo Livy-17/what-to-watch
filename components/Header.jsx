@@ -13,7 +13,7 @@ const handleChange = (event) => {
 
   return ( 
     <div className='fixed top-0 w-full flex h-[70px] items-center justify-between pl-10 pr-10 z-50 text-white' style={{ backgroundColor: 'rgba(24, 24, 24, 1)' }}>
-      <p className='text-[20px]' id='nav--title'>WhatToWatch</p>
+      <p className='text-[30px]' id='nav--title'>WhatToWatch</p>
       <div className='flex flex-row items-center justify-center gap-5'>
         <div>
           <FormControl fullWidth >
