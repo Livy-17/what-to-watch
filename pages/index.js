@@ -18,14 +18,14 @@ export default function Home({ setShowNavbar }) {
 
   return (
     <div className='h-screen flex items-center justify-center'>
-      <div className='flex flex-col items-center justify-center h-[300px] w-[500px] bg-slate-400 rounded-[15px] border-2 border-white border-solid'>
+      <div className='flex flex-col items-center justify-center h-[300px] w-[500px] bg-slate-300 rounded-[5px]'>
         <p className='text-[20px] mb-[30px] text-gray-700'>Please choose your country or region</p>
-        <div className='w-[200px] bg-slate-400 rounded-[10px]'>
+        <div className='w-[200px] bg-slate-300 rounded-[10px]'>
           <FormControl fullWidth>
-            <InputLabel id="demo-simple-select-label">Country</InputLabel>
+            <InputLabel id="start-select-label">Country</InputLabel>
             <Select
-              labelId="demo-simple-select-label"
-              id="demo-simple-select"
+              labelId="start-select-label"
+              id="start-select"
               label="Country"
               onChange={handleChange}
               style={{borderRadius: '10px'}}

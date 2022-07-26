@@ -17,12 +17,12 @@ const handleChange = (event) => {
       <div className='flex flex-row items-center justify-center gap-5'>
         <div>
           <FormControl fullWidth >
-            <InputLabel id="demo-simple-select-label">
+            <InputLabel id="header-select-label">
               <PublicIcon fontSize='small' color='primary' />
             </InputLabel>
             <Select
-              labelId="demo-simple-select-label"
-              id="demo-simple-select"
+              labelId="header-select-label"
+              id="header-select"
               label="Country"
               onChange={handleChange}
               sx={{borderRadius: '5px', height: '50px', width: '70px'}}
